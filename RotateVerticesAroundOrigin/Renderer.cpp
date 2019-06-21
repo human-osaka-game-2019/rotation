@@ -1,4 +1,4 @@
-#include "Renderer.h"
+ï»¿#include "Renderer.h"
 
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -35,7 +35,7 @@ void Renderer::Release() {
 }
 
 void Renderer::Draw() {
-	// Œ³ƒlƒ^‚Æ‚È‚é’¸“_î•ñ
+	// å…ƒãƒã‚¿ã¨ãªã‚‹é ‚ç‚¹æƒ…å ±
 	CUSTOMVERTEX original[4]
 	{
 		{ 0.0f, 0.0f },
@@ -44,18 +44,18 @@ void Renderer::Draw() {
 		{ 0.0f, 126.0f }
 	};
 
-	// ‰ñ“]Šp‚ğdegree‚©‚çradian‚É•ÏŠ·‚µAsin‚Æcos‚Ì’l‚ğZo
+	// å›è»¢è§’ã‚’degreeã‹ã‚‰radianã«å¤‰æ›ã—ã€sinã¨cosã®å€¤ã‚’ç®—å‡º
 	double radian = m_Degree * M_PI / 180;
 	float sine = (float)sin(radian);
 	float cosine = (float)cos(radian);
 
-	// İ’è‚³‚ê‚½‰ñ“]Šp‚É‰‚¶AŒ´“_‚ğ’†S‚Æ‚µ‚Ä‰ñ“]‚³‚¹‚é
+	// è¨­å®šã•ã‚ŒãŸå›è»¢è§’ã«å¿œã˜ã€åŸç‚¹ã‚’ä¸­å¿ƒã¨ã—ã¦å›è»¢ã•ã›ã‚‹
 	CUSTOMVERTEX elephant[4];
 	for (int i = 0; i < sizeof(elephant) / sizeof(CUSTOMVERTEX); i++) {
-		// ‰ñ“]Œã‚Ìx = ‰ñ“]‘O‚ÌxEcosƒÆ - ‰ñ“]‘O‚ÌyEsinƒÆ
+		// å›è»¢å¾Œã®x = å›è»¢å‰ã®xãƒ»cosÎ¸ - å›è»¢å‰ã®yãƒ»sinÎ¸
 		elephant[i].x = original[i].x * cosine - original[i].y * sine;
 
-		// ‰ñ“]Œã‚Ìy = ‰ñ“]‘O‚ÌxEsinƒÆ + ‰ñ“]‘O‚ÌyEcosƒÆ 
+		// å›è»¢å¾Œã®y = å›è»¢å‰ã®xãƒ»sinÎ¸ + å›è»¢å‰ã®yãƒ»cosÎ¸ 
 		elephant[i].y = original[i].x * sine + original[i].y * cosine;
 
 		elephant[i].z = 0.0f;
@@ -65,13 +65,13 @@ void Renderer::Draw() {
 		elephant[i].tv = (original[i].y == 0.0f ? 0.0f : 1.0f);
 	}
 
-	//‰æ–Ê‚ÌÁ‹
+	//ç”»é¢ã®æ¶ˆå»
 	m_pDevice->Clear(0, NULL,
 		D3DCLEAR_TARGET,
 		D3DCOLOR_XRGB(0x00, 0x00, 0x00),
 		1.0, 0);
 
-	//•`‰æ‚ÌŠJn
+	//æç”»ã®é–‹å§‹
 	m_pDevice->BeginScene();
 	m_pDevice->SetTexture(0, m_pTexture);
 	m_pDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, elephant, sizeof(CUSTOMVERTEX));

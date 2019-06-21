@@ -1,40 +1,40 @@
-#ifndef WINDOW_H_
+ï»¿#ifndef WINDOW_H_
 #define WINDOW_H_
 
 #include <Windows.h>
 
 /// <summary>
-/// ƒEƒBƒ“ƒhƒE‚ÉŠÖ‚·‚éˆ—‚ðs‚¤ƒNƒ‰ƒX
+/// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã«é–¢ã™ã‚‹å‡¦ç†ã‚’è¡Œã†ã‚¯ãƒ©ã‚¹
 /// </summary>
 class Window {
 public:
 	/// <summary>
-	/// ƒEƒBƒ“ƒhƒE‚ð¶¬‚·‚é
+	/// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ç”Ÿæˆã™ã‚‹
 	/// </summary>
-	/// <returns>ƒEƒBƒ“ƒhƒEƒnƒ“ƒhƒ‹</returns>
+	/// <returns>ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«</returns>
 	HWND Create();
 
 	/// <summary>
-	/// ƒEƒBƒ“ƒhƒEƒƒbƒZ[ƒW‚ðˆ—‚·‚é
+	/// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹
 	/// </summary>
-	/// <param name="pMsg">ƒƒbƒZ[ƒW\‘¢‘Ì‚Ö‚Ìƒ|ƒCƒ“ƒ^</param>
-	/// <returns>ƒƒbƒZ[ƒW‚ðˆ—‚µ‚½ê‡‚ÍtrueAƒƒbƒZ[ƒW–¢ŽóM‚¾‚Á‚½ê‡‚Ífalse</returns>
+	/// <param name="pMsg">ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æ§‹é€ ä½“ã¸ã®ãƒã‚¤ãƒ³ã‚¿</param>
+	/// <returns>ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã—ãŸå ´åˆã¯trueã€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æœªå—ä¿¡ã ã£ãŸå ´åˆã¯false</returns>
 	bool ProcessWindowMessage(MSG* pMsg);
 
 private:
 	/// <summary>
-	/// ƒEƒBƒ“ƒhƒEƒ^ƒCƒgƒ‹•¶Žš—ñ‚ðŽæ“¾‚·‚é
+	/// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚¿ã‚¤ãƒˆãƒ«æ–‡å­—åˆ—ã‚’å–å¾—ã™ã‚‹
 	/// </summary>
-	/// <returns>ƒEƒBƒ“ƒhƒEƒ^ƒCƒgƒ‹</returns>
-	static const TCHAR* Title() { return TEXT("Œ´“_(‰æ–Ê¶ã)‚Å‰ñ“]"); }
+	/// <returns>ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚¿ã‚¤ãƒˆãƒ«</returns>
+	static const TCHAR* Title() { return TEXT("åŽŸç‚¹(ç”»é¢å·¦ä¸Š)ã§å›žè»¢"); }
 
 	/// <summary>
-	/// ƒEƒBƒ“ƒhƒE‚Ì•
+	/// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®å¹…
 	/// </summary>
 	static const int WIDTH = 1280;
 
 	/// <summary>
-	/// ƒEƒBƒ“ƒhƒE‚Ì‚‚³
+	/// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®é«˜ã•
 	/// </summary>
 	static const int HEIGHT = 720;
 };

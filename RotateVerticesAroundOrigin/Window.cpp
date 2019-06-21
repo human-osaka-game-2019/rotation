@@ -1,10 +1,10 @@
-#include "Window.h"
+Ôªø#include "Window.h"
 
 /***********************************************************************/
 // Global Methods
 /***********************************************************************/
 
-// ÉEÉBÉìÉhÉEÉvÉçÉVÅ[ÉWÉÉ
+// „Ç¶„Ç£„É≥„Éâ„Ç¶„Éó„É≠„Ç∑„Éº„Ç∏„É£
 static LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
 	switch (msg) {
 	case WM_DESTROY:

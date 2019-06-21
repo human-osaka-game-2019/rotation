@@ -1,4 +1,4 @@
-#ifndef CONTROLLER_H_
+ï»¿#ifndef CONTROLLER_H_
 #define CONTROLLER_H_
 
 #include <Windows.h>
@@ -8,25 +8,25 @@
 #include "Renderer.h"
 
 /// <summary>
-/// ƒ†[ƒU‘€ìˆ—ƒNƒ‰ƒX
+/// ãƒ¦ãƒ¼ã‚¶æ“ä½œå‡¦ç†ã‚¯ãƒ©ã‚¹
 /// </summary>
 class Controller {
 public:
 	/// <summary>
-	/// ‰Šú‰»
+	/// åˆæœŸåŒ–
 	/// </summary>
-	/// <param name="hWnd">ƒEƒBƒ“ƒhƒEƒnƒ“ƒhƒ‹</param>
-	/// <param name="pRenderer">•`‰æƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX</param>
-	/// <returns>‰Šú‰»Œ‹‰Ê</returns>
+	/// <param name="hWnd">ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«</param>
+	/// <param name="pRenderer">æç”»ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹</param>
+	/// <returns>åˆæœŸåŒ–çµæžœ</returns>
 	HRESULT Initialize(HWND hWnd, Renderer* pRenderer);
 
 	/// <summary>
-	/// ƒŠƒ\[ƒX‚ðŠJ•ú‚·‚é
+	/// ãƒªã‚½ãƒ¼ã‚¹ã‚’é–‹æ”¾ã™ã‚‹
 	/// </summary>
 	void Release();
 
 	/// <summary>
-	/// ƒ†[ƒU‘€ì‚É‚æ‚éó‘ÔXV
+	/// ãƒ¦ãƒ¼ã‚¶æ“ä½œã«ã‚ˆã‚‹çŠ¶æ…‹æ›´æ–°
 	/// </summary>
 	void Update();
 

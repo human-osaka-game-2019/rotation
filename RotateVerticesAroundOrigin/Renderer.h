@@ -1,35 +1,35 @@
-#ifndef RENDERER_H_
+ï»¿#ifndef RENDERER_H_
 #define RENDERER_H_
 
 #include <Windows.h>
 #include <d3dx9.h>
 
 /// <summary>
-/// •`‰æƒNƒ‰ƒX
+/// æç”»ã‚¯ãƒ©ã‚¹
 /// </summary>
 class Renderer {
 public:
 	/// <summary>
-	/// ‰Šú‰»
+	/// åˆæœŸåŒ–
 	/// </summary>
-	/// <param name="pDevice">ƒOƒ‰ƒtƒBƒbƒNƒfƒoƒCƒX</param>
-	/// <returns>‰Šú‰»Œ‹‰Ê</returns>
+	/// <param name="pDevice">ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ãƒ‡ãƒã‚¤ã‚¹</param>
+	/// <returns>åˆæœŸåŒ–çµæœ</returns>
 	HRESULT Initialize(LPDIRECT3DDEVICE9 pDevice);
 
 	/// <summary>
-	/// ƒŠƒ\[ƒX‚ğŠJ•ú‚·‚é
+	/// ãƒªã‚½ãƒ¼ã‚¹ã‚’é–‹æ”¾ã™ã‚‹
 	/// </summary>
 	void Release();
 
 	/// <summary>
-	/// •`‰æ
+	/// æç”»
 	/// </summary>
 	void Draw();
 
 	/// <summary>
-	/// ‰ñ“]
+	/// å›è»¢
 	/// </summary>
-	/// <param name="degree">‰ñ“]Šp(³:‰E‰ñ‚èA•‰:¶‰ñ‚è</param>
+	/// <param name="degree">å›è»¢è§’(æ­£:å³å›ã‚Šã€è² :å·¦å›ã‚Š</param>
 	void Rotate(int degree) { m_Degree += degree; }
 
 private:

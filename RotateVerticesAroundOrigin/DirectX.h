@@ -1,4 +1,4 @@
-#ifndef DIRECTX_H_
+ï»¿#ifndef DIRECTX_H_
 #define DIRECTX_H_
 
 #include <d3dx9.h>
@@ -7,21 +7,21 @@
 #include "Controller.h"
 
 /// <summary>
-/// DirectXƒIƒuƒWƒFƒNƒgƒNƒ‰ƒX
+/// DirectXã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚¯ãƒ©ã‚¹
 /// </summary>
 class DirectX {
 public:
 	/// <summary>
-	/// ‰Šú‰»
+	/// åˆæœŸåŒ–
 	/// </summary>
-	/// <param name="hWnd">ƒEƒBƒ“ƒhƒEƒnƒ“ƒhƒ‹</param>
-	/// <param name="pRenderer">•`‰æƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX</param>
-	/// <param name="pController">‘€ìƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX</param>
-	/// <returns>‰Šú‰»Œ‹‰Ê</returns>
+	/// <param name="hWnd">ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«</param>
+	/// <param name="pRenderer">æç”»ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹</param>
+	/// <param name="pController">æ“ä½œã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹</param>
+	/// <returns>åˆæœŸåŒ–çµæœ</returns>
 	HRESULT Initialize(HWND hWnd, Renderer* pRenderer, Controller* pController);
 
 	/// <summary>
-	/// ƒŠƒ\[ƒX‚ğ‰ğ•ú‚·‚é
+	/// ãƒªã‚½ãƒ¼ã‚¹ã‚’è§£æ”¾ã™ã‚‹
 	/// </summary>
 	void Release();
 
