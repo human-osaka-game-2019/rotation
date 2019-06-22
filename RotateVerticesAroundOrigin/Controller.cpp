@@ -43,10 +43,22 @@ void Controller::Update() {
 		m_pKeyDevice->GetDeviceState(sizeof(diks), &diks);
 
 		if (diks[DIK_LEFT] & 0x80) {
-			m_pRenderer->Rotate(-10);
+			m_pRenderer->Move({ -10.0f, 0.0f });
 		}
 		if (diks[DIK_RIGHT] & 0x80) {
-			m_pRenderer->Rotate(10);
+			m_pRenderer->Move({ 10.0f, 0.0f });
+		}
+		if (diks[DIK_UP] & 0x80) {
+			m_pRenderer->Move({ 0.0f, -10.0f });
+		}
+		if (diks[DIK_DOWN] & 0x80) {
+			m_pRenderer->Move({ 0.0f, 10.0f });
+		}
+		if (diks[DIK_R] & 0x80) {
+			m_pRenderer->Rotate(5);
+		}
+		if (diks[DIK_L] & 0x80) {
+			m_pRenderer->Rotate(-5);
 		}
 	}
 }

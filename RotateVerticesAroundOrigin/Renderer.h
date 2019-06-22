@@ -10,6 +10,14 @@
 class Renderer {
 public:
 	/// <summary>
+	/// 移動量
+	/// </summary>
+	struct Offset
+	{
+		FLOAT x, y;
+	};
+
+	/// <summary>
 	/// 初期化
 	/// </summary>
 	/// <param name="pDevice">グラフィックデバイス</param>
@@ -32,6 +40,12 @@ public:
 	/// <param name="degree">回転角(正:右回り、負:左回り</param>
 	void Rotate(int degree) { m_Degree += degree; }
 
+	/// <summary>
+	/// 移動
+	/// </summary>
+	/// <param name="amount">移動量</param>
+	void Move(Offset amount) { m_Offset.x += amount.x; m_Offset.y += amount.y; }
+
 private:
 	struct CUSTOMVERTEX
 	{
@@ -45,6 +59,7 @@ private:
 	const TCHAR* ImageFileName() { return TEXT("Elephant.png"); }
 	static const DWORD FVF = (D3DFVF_XYZRHW | D3DFVF_DIFFUSE | D3DFVF_TEX1);
 	int m_Degree;
+	Offset m_Offset;
 };
 
 #endif // !RENDERER_H_

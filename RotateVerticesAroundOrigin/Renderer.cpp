@@ -25,6 +25,7 @@ HRESULT Renderer::Initialize(LPDIRECT3DDEVICE9 pDevice) {
 		&m_pTexture);
 
 	m_Degree = 0;
+	m_Offset = { 0.0f, 0.0f };
 
 	return S_OK;
 }
@@ -52,6 +53,9 @@ void Renderer::Draw() {
 	// 設定された回転角に応じ、原点を中心として回転させる
 	CUSTOMVERTEX elephant[4];
 	for (int i = 0; i < sizeof(elephant) / sizeof(CUSTOMVERTEX); i++) {
+		original[i].x += m_Offset.x;
+		original[i].y += m_Offset.y;
+
 		// 回転後のx = 回転前のx・cosθ - 回転前のy・sinθ
 		elephant[i].x = original[i].x * cosine - original[i].y * sine;
 
@@ -61,8 +65,8 @@ void Renderer::Draw() {
 		elephant[i].z = 0.0f;
 		elephant[i].rhw = 1.0f;
 		elephant[i].color = 0xFFFFFFFF;
-		elephant[i].tu = (original[i].x == 0.0f ? 0.0f : 1.0f);
-		elephant[i].tv = (original[i].y == 0.0f ? 0.0f : 1.0f);
+		elephant[i].tu = (i % 3 == 0 ? 0.0f : 1.0f);
+		elephant[i].tv = (i < 2 ? 0.0f : 1.0f);
 	}
 
 	//画面の消去
