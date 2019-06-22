@@ -25,7 +25,7 @@ HRESULT Renderer::Initialize(LPDIRECT3DDEVICE9 pDevice) {
 		&m_pTexture);
 
 	m_Degree = 0;
-	m_Offset = { 640, 360 };
+	m_Offset = { 640.0f, 360.0f };
 
 	return S_OK;
 }
