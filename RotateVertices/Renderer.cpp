@@ -1,8 +1,5 @@
 ﻿#include "Renderer.h"
 
-#define _USE_MATH_DEFINES
-#include <math.h>
-
 /***********************************************************************/
 // Public Methods
 /***********************************************************************/
@@ -46,7 +43,8 @@ void Renderer::Draw() {
 	};
 
 	// 回転角をdegreeからradianに変換し、sinとcosの値を算出
-	double radian = m_Degree * M_PI / 180;
+	// (DirectXの便利関数を使えば自分で計算しなくて済むけれど、今は練習なので…)
+	double radian = m_Degree * D3DX_PI / 180;
 	float sine = (float)sin(radian);
 	float cosine = (float)cos(radian);
 
