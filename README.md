@@ -2,6 +2,7 @@
 ## RotateVerticesAroundOrigin
 DirectXでのサンプルです。  
 原点(2Dなのでウィンドウの左上部分)を中心に画像がクルクル回ります。
+![キャプチャ](https://user-images.githubusercontent.com/12269762/59962880-40cd4100-9526-11e9-9067-9138d491cc55.gif)
 
 |キー種別|動作|
 |---|---|
@@ -15,6 +16,8 @@ DirectXでのサンプルです。
 ## RotateVertices
 DirectXを用いたサンプルです。  
 画像がその場でクルクル回ります。
+![キャプチャ](https://user-images.githubusercontent.com/12269762/59962867-0e234880-9526-11e9-9683-fd5b117f0a47.gif)
+
 処理としては、
 1. 左上で矩形を回転させ
 2. それを元の位置に平行移動させて戻す
@@ -33,12 +36,13 @@ DirectXを用いたサンプルです。
 ## RotateArray
 配列の回転のサンプルです。  
 コンソール画面でテトリスのZブロックが左右にクルクル回ります。
+![キャプチャ](https://user-images.githubusercontent.com/12269762/59962887-4cb90300-9526-11e9-8127-7e31e6c3f899.gif)
 
 # 基本の考え
 結局のところ数学の話です。  
 下図のように、ある点`(x, y)`を`θ`回転させた点`(x', y')`について考えます。
 
-![top-page](https://raw.githubusercontent.com/human-osaka-game-2019/rotation/images/回転.png)
+![図](https://user-images.githubusercontent.com/12269762/59962901-825dec00-9526-11e9-90ec-b3eb8418e3c4.png)
 
 ※前提として、加法定理は知っているものとします。
 ```
