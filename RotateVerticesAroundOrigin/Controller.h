@@ -21,7 +21,7 @@ public:
 	HRESULT Initialize(HWND hWnd, Renderer* pRenderer);
 
 	/// <summary>
-	/// リソースを開放する
+	/// リソースを解放する
 	/// </summary>
 	void Release();
 

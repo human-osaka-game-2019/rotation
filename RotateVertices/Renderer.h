@@ -25,7 +25,7 @@ public:
 	HRESULT Initialize(LPDIRECT3DDEVICE9 pDevice);
 
 	/// <summary>
-	/// リソースを開放する
+	/// リソースを解放する
 	/// </summary>
 	void Release();
 

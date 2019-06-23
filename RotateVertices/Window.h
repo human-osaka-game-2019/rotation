@@ -26,7 +26,7 @@ private:
 	/// ウィンドウタイトル文字列を取得する
 	/// </summary>
 	/// <returns>ウィンドウタイトル</returns>
-	static const TCHAR* Title() { return TEXT("原点(画面左上)で回転"); }
+	static const TCHAR* Title() { return TEXT("その場で回転"); }
 
 	/// <summary>
 	/// ウィンドウの幅
